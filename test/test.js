@@ -30,7 +30,7 @@ describe('Log Function', () => {
             return obj
         }
         functionInject.inject(log)
-        assert.equal(functionInject.log, log)
+        assert.ok(typeof (functionInject.log) == 'function')
     })
 })
 

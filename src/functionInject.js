@@ -8,9 +8,9 @@ let log = null
 //事件注入
 const inject = (fn) => {
     if (fn && typeof (fn) == 'function') {
-        log = () => {
+        log = (...params) => {
             try {
-                fn()
+                return fn(...params)
             } catch (e) {
                 console.log(e)
             }
