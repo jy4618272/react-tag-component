@@ -4,7 +4,7 @@
     "description": "react埋点组件",
     "main": "src/index.js",
     "scripts": {
-        "test": "node ./node_modules/.bin/istanbul cover mocha test/",
+        "test": "./node_modules/.bin/istanbul cover _mocha test/",
         "coverage": "cat ./coverage/lcov.info | coveralls"
     },
     "repository": {
@@ -27,6 +27,7 @@
     "devDependencies": {
         "coveralls": "^3.0.0",
         "istanbul": "^0.4.5",
-        "mocha": "^5.0.1"
+        "mocha": "^5.0.1",
+        "mocha-lcov-reporter": "^1.3.0"
     }
 }
