@@ -52,7 +52,6 @@ const deletDom = (id, pid) => {
  * 增加展现时埋点dom
  * @param {Object} tag 埋点参数 
  * @param {String} id 需要展现的id
- * 
  */
 const addDom = (tag, id) => {
     let n = tag.pid ? document.getElementById(tag.pid) : document.documentElement
