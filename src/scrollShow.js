@@ -26,7 +26,7 @@ const caculateProperty = (n) => {
     const clientHeight = n.clientHeight,
         clientWidth = n.clientWidth,
         clientTop = n.getBoundingClientRect().top,
-        clientLeft = n.getBoundingClientRect().left,
+        clientLeft = n.getBoundingClientRect().left
     return { clientHeight, clientWidth, clientTop, clientLeft, libs: new Set() }
 }
 

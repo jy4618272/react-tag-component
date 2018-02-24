@@ -12,7 +12,7 @@ const inject = (fn) => {
             try {
                 return fn(...params)
             } catch (e) {
-                console.log(e)
+                console.error(e)
             }
         }
     }

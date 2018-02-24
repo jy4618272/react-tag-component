@@ -34,6 +34,7 @@ const dealData = ({ type, tag, id }, _props) => {
 
 class TD extends React.Component {
     constructor(props) {
+        super(props)
         const type = getType(props.onTag)
         if (type === 'SCROLL') init(log, BD)
         this.state = {

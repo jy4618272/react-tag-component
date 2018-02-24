@@ -8,10 +8,10 @@ let BD = null
 //注入埋点数据
 const inject = (data = {}) => {
     if (BD) {
-        BD = { ...BD, ...data }
-        return
+        BD = Object.assign(BD, data)
+    } else {
+        BD = data
     }
-    BD = data
 }
 
 module.exports = {

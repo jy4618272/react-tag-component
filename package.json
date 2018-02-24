@@ -2,9 +2,9 @@
     "name": "react-ontag-component",
     "version": "1.0.0",
     "description": "react埋点组件",
-    "main": "src/index.js",
+    "main": "lib/index.js",
     "scripts": {
-        "test": "./node_modules/.bin/istanbul cover _mocha test/",
+        "test": "npx babel src -d lib | npx istanbul cover _mocha test/",
         "coverage": "cat ./coverage/lcov.info | coveralls"
     },
     "repository": {
@@ -25,9 +25,18 @@
         "react": "^16.2.0"
     },
     "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-plugin-transform-runtime": "^6.23.0",
+        "babel-polyfill": "^6.26.0",
+        "babel-preset-env": "^1.6.1",
+        "babel-preset-es2015": "^6.24.1",
+        "babel-preset-minify": "^0.3.0",
+        "babel-preset-react": "^6.24.1",
+        "babel-runtime": "^6.26.0",
         "coveralls": "^3.0.0",
         "istanbul": "^0.4.5",
         "mocha": "^5.0.1",
-        "mocha-lcov-reporter": "^1.3.0"
+        "mocha-lcov-reporter": "^1.3.0",
+        "nyc": "^11.4.1"
     }
 }
