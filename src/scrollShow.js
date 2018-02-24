@@ -17,6 +17,7 @@ const scrollFn = (e) => {
             Math.abs(getBoundingClientRect.left - clientLeft) < clientWidth)) {
             item['data-log-time']--
             log(BD, item['data-log'])
+            libs.delete(item)
         }
     }
 }
