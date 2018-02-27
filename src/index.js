@@ -16,6 +16,6 @@ module.exports = {
         }
     },
     get TD() {
-        return require('./TD')
+        return require('./TD').default
     }
 }

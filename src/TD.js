@@ -6,16 +6,19 @@ import { init, addDom, deletDom } from './scrollShow'
 //获取type(埋点触发类型)
 const getType = (tag) => {
     if (!tag) return
-    return tag.type || 'CLICK'
+    return tag.type || 'click'
 }
+
+//注入id,滑动展现埋点需要
+let tagId = 1
 
 //根据type类型处理埋点方式
 const dealData = ({ type, tag, id }, _props) => {
     switch (type) {
-        case 'RENDER':
+        case 'render':
             log(BD, tag)
             break
-        case 'CLICK':
+        case 'click':
             if (_props.onClick) {
                 const fn = _props.onClick
                 _props.onClick = () => {
@@ -26,35 +29,38 @@ const dealData = ({ type, tag, id }, _props) => {
                 _props.onClick = () => log(BD, tag)
             }
             break
-        case 'SCROLL':
+        case 'scroll':
             _props.id = id
-            addDom(tag, id)
     }
 }
 
 class TD extends React.Component {
     constructor(props) {
         super(props)
-        const type = getType(props.onTag)
-        if (type === 'SCROLL') init(log, BD)
+        const type = getType(props.Tag)
+        if (type === 'scroll') init(log, BD)
+
         this.state = {
-            tag: props.onTag,
+            tag: props.Tag,
             type: type,
-            id: 'tag' + new Date().getTime()
+            id: type === 'scroll' ? 'tag' + (tagId++) : ''
         }
     }
     componentDidMount() {
-        if (this.type === 'MOUNT') log(BD, this.tag)
+        if (this.state.type === 'mount') log(BD, this.state.tag)
+        if (this.state.type === 'scroll') {
+            addDom(this.state.tag, this.state.id)
+        }
     }
     componentWillUnmount() {
-        if (this.type == 'SCROLL') deletDom(id, tag.pid)
+        if (this.state.type == 'scroll') deletDom(id, tag.pid)
     }
     render() {
-        const _props = this.props
-        Reflect.defineProperty(_props, 'onTag')
+        const _props = { ...this.props }
+        Reflect.deleteProperty(_props, 'Tag')
         dealData(this.state, _props)
         return <div {..._props}>
-            {props.children}
+            {this.props.children}
         </div>
     }
 }
