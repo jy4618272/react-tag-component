@@ -24,7 +24,11 @@ const data = const data = {
     'click': 'click 事件埋点'
 }
 
-//埋点事件
+/**
+ *  埋点事件
+ * @param {Object} bd 埋点数据，由内部注入
+ * @param {Object} tag 组件上Tag对象，由内部注入
+ */
 function log(bd, tag) {
     const ld = bd[tag.key]  //获取埋点数据仓库对应值
     ...    //相应处理
