@@ -31,7 +31,7 @@ export default class App extends React.Component {
             <TD Tag={{ key: 'mount', params: 'b', type: 'mount' }}>
                 mount时输出
             </TD>
-            <TD Tag={{ key: 'click', params: 'c', type: 'click' }}>
+            <TD onClick={() => console.log('点击')} Tag={{ key: 'click', params: 'c', type: 'click' }}>
                 点击时输出
             </TD>
             <div id='scrollTop' style={{ height: '80px', overflow: 'auto' }}>
