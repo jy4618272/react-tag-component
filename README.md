@@ -40,7 +40,7 @@ export default class App extends React.Component {
     }
     render() {
         return <div>
-            <TD onClick={() => console.log('点击')} Tag={{ key:                 'click', params: 'c', type: 'click' }}>
+            <TD onClick={() => console.log('点击')} Tag={{ key: 'click', params: 'c', type: 'click' }}>
                 点击时输出
             </TD>
         </div>
