@@ -47,7 +47,7 @@ export default class App extends React.Component {
     }
 }
 ```
-[更多示例](https://github.com/ZBcoder/react-tag-component/tree/master/demo/src/page)
+[更多示例](https://github.com/ZBcoder/react-tag-component/blob/master/demo/src/page/Main.jsx)
 
 ## 说明
 
