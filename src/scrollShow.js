@@ -62,7 +62,6 @@ const addDom = (tag, id) => {
     if (n) {
         if (!pNode.has(n)) {
             pNode.set(n, caculateProperty(n))
-            console.log(caculateProperty(n))
             addListener(n)
         }
         const pn = pNode.get(n)

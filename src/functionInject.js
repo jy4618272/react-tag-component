@@ -13,6 +13,7 @@ const inject = (fn) => {
                 return fn(...params)
             } catch (e) {
                 console.error(e)
+                return
             }
         }
     }

@@ -8,7 +8,7 @@ let BD = null
 //注入埋点数据
 const inject = (data = {}) => {
     if (BD) {
-        BD = Object.assign(BD, data)
+        BD = { ...BD, ...data }
     } else {
         BD = data
     }
