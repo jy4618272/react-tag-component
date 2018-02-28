@@ -1,6 +1,6 @@
 const assert = require('assert')
-const dataInject = require('../lib/dataInject')
-const functionInject = require('../lib/functionInject')
+const dataInject = require('../src/dataInject')
+const functionInject = require('../src/functionInject')
 
 describe('dataInject 模块', () => {
     describe('Buried Data', () => {
