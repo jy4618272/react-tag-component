@@ -74,6 +74,6 @@ export default class App extends React.Component {
       scroll                   上滑/左滑展现时执行
 
 ## 联系
-如有问题，联系QQ: 784846435
+如有问题，请联系QQ: 784846435
 
 
