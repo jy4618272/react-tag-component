@@ -1,6 +1,6 @@
 {
     "name": "react-tag-component",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "description": "react埋点组件",
     "main": "lib/index.js",
     "scripts": {
@@ -14,7 +14,7 @@
     },
     "keywords": [
         "react",
-        "ontag"
+        "tag"
     ],
     "author": "zbcoder",
     "license": "MIT",
