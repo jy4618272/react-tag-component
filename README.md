@@ -1,8 +1,8 @@
 # react-tag-component
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ZBcoder/react-tag-component/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/zbcoder/react-tag-component/blob/master/LICENSE)
 [![npm version](https://img.shields.io/npm/v/react-tag-component.svg)](https://www.npmjs.com/package/react-tag-component)
-[![Build Status](https://travis-ci.org/ZBcoder/react-tag-component.svg?branch=master)](https://travis-ci.org/ZBcoder/react-tag-component)
-[![Coverage Status](https://coveralls.io/repos/github/ZBcoder/react-tag-component/badge.svg?branch=master)](https://coveralls.io/github/ZBcoder/react-tag-component?branch=master)
+[![Build Status](https://travis-ci.org/zbcoder/react-tag-component.svg?branch=master)](https://travis-ci.org/zbcoder/react-tag-component)
+[![Coverage Status](https://coveralls.io/repos/github/zbcoder/react-tag-component/badge.svg?branch=master)](https://coveralls.io/github/zbcoder/react-tag-component?branch=master)
 
 react埋点组件，持续集成埋点方式
 
